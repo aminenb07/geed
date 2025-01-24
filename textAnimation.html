@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background-color: black;}
+        span{color: aliceblue;}
+        .lood{
+            color: rgb(77, 255, 0);
+            border-right: 3px solid ;
+            width: max-content;
+            font-size: 24px;
+            font-weight: bold;
+
+            animation: lood 8s  steps(30) ;
+        }
+        /*@keyframes lood{
+            0%{
+                width: 0;
+
+            }
+            100%{
+                width:  100%;
+            }
+        } */
+  
+        body{
+            color: aliceblue;
+            background-color: black;
+        }
+        #lood{
+            color: rgb(89, 255, 0);
+        }
+        .motalat{
+            width:0;
+            height: 0;
+           justify-self: center;
+            border-style: solid;
+            border-width: 100px 50px 0 50px;
+            border-color: #007bff transparent transparent transparent ;
+            transition: all 0.5s ease-in-out;
+            animation: loode 1s linear infinite;
+            
+        }
+        @keyframes loode{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .motalat:hover{}
+    </style>
+</head>
+<body>
+    <div>Hey there <br> I am a</div>
+    <div class="lood" id="lood"></div>
+    <script>
+        const text = document.getElementById('lood')
+        const change = 'softwar enginere!! '
+        let index = 0
+        function typing(){
+            if (index < change.length){
+                text.textContent = change.substring(0, index)
+                index++
+                setTimeout(typing, 160)
+            }
+        }
+        typing()
+    </script>
+    <div class="motalat"></div>
+</body>
+</html>

@@ -1,0 +1,330 @@
+/* 
+header {
+    background-color: #333; /* لون خلفية داكن 
+    color: #fff; /* لون نص فاتح *
+    padding: 20px;
+    text-align: center; /* محاذاة النص إلى الوسط 
+}
+
+header p {
+    font-size: 2.5em;
+    margin: -15px;
+}
+
+header nav {
+    margin-top: 15px;
+}
+
+header nav ul {
+    list-style-type: none; /* إزالة النقط من القائمة 
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* مسافة بين العناصر 
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #000000; /* لون النص 
+    background-color: #ffffff;
+    text-decoration: none; /* إزالة التسطير 
+    font-size: 1.2em;
+    padding: 10px 15px;
+    transition: background-color 0.3s; /* تأثير التحول عند التمرير 
+    transition: color 0.3;
+    border-radius: 50px;
+}
+
+header nav ul li a:hover {
+    background-color: #333; /* لون عند التمرير *
+    border-radius: 50px; /* حواف دائرية 
+    color: #ffffff;
+    filter: drop-shadow(red);
+    font-variant-ligatures: historical-ligatures;
+}
+body{
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.registration {
+    margin: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+h3{
+    color: #ffffff;
+    font-size: xx-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+section.register{
+    border-radius: 35px;
+    box-shadow: #4b4b4b;
+    background-color: #333;
+    margin: auto;
+    width: 30%;
+    height: 200px;
+    
+}
+
+.registration ul {
+    list-style-type: none; /* إزالة النقط من القائمة *
+    padding: 0;
+    margin: 0;
+    gap: 25px; /* مسافة بين العناصر *
+    font-family: Open, sans-serif;
+
+
+
+}
+.registration ul li a {
+    background-color: #ffffff;
+    color: #000000; /* لون النص *
+    text-decoration: none; /* إزالة التسطير *
+    font-size: 1.2em;
+    padding: 10px 15px;
+    transition: color 0.3;
+    transition: background-color 0.3s; /* تأثير التحول عند التمرير 
+    border-radius: 40px;
+}
+.registration button{
+    border: none;
+    width: 160px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: rgb(255, 255, 255);
+    transition: background-color 0.3s;
+    font-size: x-large;
+}
+.registration button:hover{
+    color: #ffffff;
+    background-color: #333;
+    filter: drop-shadow(red);
+}
+.registration a:hover {
+    color: #ffffff; /* لون عند التمرير *
+    background-color: #333;
+    filter: drop-shadow(red);
+} */
+header {
+    background-color: #333; /* لون خلفية داكن */
+    color: rgb(255, 255, 255); /* لون نص فاتح */
+    padding: 20px;
+    text-align: center; /* محاذاة النص إلى الوسط */
+    display: flex;
+
+    padding: 0;
+    margin: 0;
+    justify-content: space-around;
+    background-attachment: scroll;
+    padding-bottom: 20px;
+ 
+}
+
+header ul h1 {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    margin-bottom: 11px;
+}
+
+header nav {
+    margin-top: 40px;
+}
+
+header nav ul {
+    list-style-type: none; /* إزالة النقط من القائمة */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* مسافة بين العناصر */
+}
+.container{
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* محاذاة النص إلى الوسط */
+    display: flex;
+    justify-content: space-around;
+    background-attachment: scroll;
+    background-color: red;
+    padding-bottom: 20px;
+    
+}
+.welcome a{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 40px;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+
+}
+.welcome a:hover{
+    background-color: #333;
+    color: #ffffff;
+    filter: drop-shadow(0 0 5px rgb(255, 255, 255));
+}
+
+/* header nav ul li {
+    display: inline-block;
+} */
+
+header nav ul li a {
+    color: #ffffff; /* لون النص */
+    background-color: red;
+    text-decoration: none; /* إزالة التسطير */
+    font-size: 1.2em;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s; /* تأثير التحول عند التمرير */
+    border-radius: 50px;
+}
+
+header nav ul li a:hover {
+    background-color: rgb(255, 255, 255); /* لون عند التمرير */
+    color: #ff0000;
+    filter: drop-shadow(0 0 5px rgb(255, 255, 255)); /* تأثير الظل */
+    border-radius: 50px;
+}
+
+body {
+    margin: 0;
+}
+
+/* .registration {
+    margin: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h3 {
+    color: #ffffff;
+    font-size: xx-large;
+}
+
+section.register {
+    border-radius: 35px;
+    box-shadow: 0 0 10px #4b4b4b;
+    background-color: #333;
+    margin: auto;
+    width: 30%;
+    height: 200px;
+}
+
+.registration ul {
+    list-style-type: none; /* إزالة النقط من القائمة *
+    padding: 0;
+    margin: 0;
+    gap: 25px; /* مسافة بين العناصر *
+}
+
+.registration ul li a {
+    background-color: #ffffff;
+    color: #000000; /* لون النص *
+    text-decoration: none; /* إزالة التسطير *
+    font-size: 1.2em;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s; /* تأثير التحول عند التمرير *
+    border-radius: 40px;
+}
+
+.registration button {
+    border: none;
+    width: 160px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: x-large;
+    
+}
+
+.registration button:hover {
+    color: red;
+    background-color: #333;
+    filter: drop-shadow(0 0 5px red); /* تأثير الظل *
+}
+
+.registration a:hover {
+    color: red; /* لون عند التمرير *
+    background-color: #333;
+    filter: drop-shadow(0 0 5px red); /* تأثير الظل *
+} */
+.amine{
+    background: linear-gradient(120deg,#333,#ccc,#333);
+}
+
+
+
+.container-register{
+    width: 100%;
+    max-width: 450px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #ff0000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    background: lin;
+
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.form h2{
+    text-align: center;
+    margin: 20px;
+
+}
+.form-group{
+    margin-bottom: 15px;
+    
+}
+.form-group label{
+    margin-bottom: 5px;
+    display: block;
+}
+.form-group input{
+    width: 96%;
+    padding: 10px;
+    border:none;
+    border-radius: 40px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.form-group input:hover{
+    background-color: #929292;
+    color: rgb(255, 255, 255);
+}
+.submit{
+    padding: 10px;
+    background-color: #ffffff;
+    color: #ff0000;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.submit:hover{
+    background-color: #929292;
+    color: #000000;
+    filter: drop-shadow(0 0 5px red);
+
+}
+.p{
+    text-align: center;
+}
+.p a{
+    color: #ccc;
+    text-decoration: none;
+}
+.p a:hover{
+    text-decoration: underline;
+
+}

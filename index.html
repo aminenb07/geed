@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome - Geeed</title>
+  <link rel="stylesheet" href="styling.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="aos-master/dist/aos.css">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="aos-master/dist/aos.js"></script>
+  <script src="aos-master/src/js/aos.js"></script>
+  <style>
+   
+section {
+    padding: 60px 20px;
+    margin-top: 50px;
+    color: #ffffff80;
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+}
+
+section h2 {
+    margin-top: 0;
+};
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; 
+    padding: 20px;
+}
+
+.container div {
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px; 
+    padding: 20px;
+    margin: 10px;
+    flex: 1; 
+    max-width: 300px; 
+}
+
+.container h2 {
+    margin-top: 0;
+}
+
+.slider{
+            width: 90vw;
+            height: auto;
+            overflow-x: scroll;
+            scrollbar-width: none;
+            cursor: grab;
+            margin-left: 5vw;
+            border-radius: 3em;
+            filter: drop-shadow(0px 0px 15px rgba(175, 175, 175, 0.658));
+            
+        }
+        .slider::-webkit-scrollbar{
+            display: none;
+        }
+        .slider-tracke{
+            width: max-content;
+            height: inherit;
+            display: flex;
+            gap: 0.65rem;
+            animation: scroll 10s linear infinite;
+        }
+        .slider-tracke:hover{
+          animation-play-state: paused;
+        }
+        .slider-image{
+            width: 30vw;
+            object-fit: cover;
+            filter: blur(2px);
+            transition: all 0.7s ease-in-out;
+        }
+        @keyframes scroll {
+          0% {
+              transform: translateX(0);
+          }
+          100% {
+              transform: translateX(calc(-30vw * 3)); /* Adjust based on the number of images */
+          }
+      }
+        .slider-image:hover{
+            filter: blur(0);
+            border-radius: 1em;
+            width: 31vw;
+        }
+        .slider.active{
+            cursor: grabbing;
+
+        }
+        .dibu{
+          margin-top: 80px;
+          margin-bottom: 20px;
+          /* filter: blur(3px);
+          color: azure; */
+          color: white;
+          
+          text-align: center;
+          font-size: 120px;
+          margin-bottom: 40px;
+        }
+        .inormal{
+          -webkit-text-stroke: 2px #ffffff;
+        }
+        .normal{
+          color: #ffffff;
+          border-radius: 5px;
+          background-color: rgba(173, 7, 188, 0.562);
+          filter: drop-shadow(4px 3px 1px rgb(0, 0, 0));
+          padding: 0 15px 0px 15px;
+          margin:20px;
+        }
+
+        .normali{
+          text-shadow: 2px 4px black;
+          /*-webkit-text-stroke: px rgb(255, 0, 0);*/
+          color: rgba(255, 255, 255, 0.922);
+        }
+        .div-btn{
+          display:flex;
+          justify-content:space-around;
+          margin-bottom:2em;
+        }
+        .btn{
+          background-color:white;
+          border: 1px solid rgba(255, 255, 255, 0.599);
+          color: rgb(173, 7, 188) ;
+          font-weight: bolder;
+          font-family:verdana;
+          padding:10px 40px ;
+          border-radius:3em;
+          font-size:x-large;
+          transition: all 0.4s ease-in-out;
+        }
+        .btn:hover{
+          color: white;
+          transform: scale(1.1);
+          cursor: pointer;
+          background-color: #00bcd4;
+          border: 1px solid #000000;
+        }
+        .btn:active{
+          cursor: progress;
+        }
+        
+        .imges{
+          width: 50%;
+          height: 50%;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          filter: drop-shadow(0px 0px 15px rgba(175, 175, 175, 0.658));
+        }
+
+
+  </style>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+  </script>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="logo">Geeed</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#service">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="auth-buttons">
+      <a href="login.html" class="btn-login">Login</a>
+      <a href="register.html" class="btn-signup">Sign Up</a>
+    </div>
+    <div class="burger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+  <!-- <br><br><br><br> -->
+  <h1 class="dibu" >
+    <span class="inormali"  data-aos="fade-right" data-aos-offset= "200" >Explor your </span><span class="normali">day</span><span class="inormal"> With </span>
+    <span class="normal">Geeed</span></h1>
+    <div class="div-btn">
+      <button href="register.html" class="btn">Explor Now</button>
+    </div>
+    
+
+  <main class="slider">
+    <div class="slider-tracke">
+      <img src="WhatsApp Image 2024-11-25 at 22.59.12_5a87fdc0.jpg" class="slider-image" alt="">
+      <img src="WhatsApp Image 2024-11-25 at 23.01.07_51542214.jpg" class="slider-image" alt="">
+      <img src="WhatsApp Image 2024-11-25 at 23.01.11_83a1a9c0.jpg" class="slider-image" alt="">
+      <img src="WhatsApp Image 2024-11-25 at 22.59.12_5a87fdc0.jpg" class="slider-image" alt="">
+      <img src="WhatsApp Image 2024-11-25 at 23.01.07_51542214.jpg" class="slider-image" alt="">
+      <img src="WhatsApp Image 2024-11-25 at 23.01.11_83a1a9c0.jpg" class="slider-image" alt="">
+      <img src="WhatsApp Image 2024-11-25 at 22.59.12_5a87fdc0.jpg" class="slider-image" alt="">
+    </div>
+  </main>
+
+  <section class="about" id="about"  style="text-align: center;">
+    <h2>About Us</h2>
+    <p style="text-justify: inter-cluster;color: rgba(240, 255, 255, 0.778); text-align:justify;">Welcome to <strong>Geeed</strong>, where innovation meets excellence. Founded in 2024 | 2025, we have been committed to delivering top-notch services and products to our clients worldwide. Our team of dedicated professionals works tirelessly to ensure that we exceed expectations and set new standards in our industry.
+      <details style="text-align:justify;">
+        <summary>More....</summary>
+      At Geeed, we believe in the power of collaboration and the importance of building strong relationships with our clients. Our mission is to provide solutions that not only meet the needs of today but also anticipate the challenges of tomorrow. We pride ourselves on our ability to adapt and grow in an ever-changing market, ensuring that we remain at the forefront of our field.
+      
+      Our core values of integrity, quality, and customer satisfaction drive everything we do. We are passionate about our work and are committed to making a positive impact on the communities we serve. Thank you for choosing Geeed as your trusted partner. We look forward to working with you and achieving great success together.
+      </details></p>
+      <div class="info-logo">
+        <img class="imges" src="info-removebg.png" ></img>
+      </div>
+</section>
+
+<section class="service" id="service" style="text-align: center;">
+    <h2>Our Services</h2>
+    <p style="text-justify: inter-cluster;color: rgba(240, 255, 255, 0.778);text-align:justify;">At Geeed, we offer a comprehensive range of services designed to meet the diverse needs of our clients. Our commitment to excellence and innovation ensures that we deliver solutions that are not only effective but also tailored to your specific requirements. Here’s a glimpse of what we offer:
+      <details style="text-align:justify;">
+        <summary>More....</summary>
+
+      1. Consulting Services: Our team of experts provides strategic consulting services to help you navigate complex business challenges and achieve your goals. We work closely with you to understand your unique needs and develop customized strategies that drive success.
+      
+      2. Technology Solutions: We offer cutting-edge technology solutions that enhance efficiency and productivity. From software development to IT infrastructure management, our services are designed to keep your business at the forefront of technological advancements.
+      
+      3. Customer Support: Our dedicated customer support team is available 24/7 to assist you with any inquiries or issues you may encounter. We pride ourselves on our ability to provide prompt and effective support, ensuring your satisfaction at every step.
+      
+      4. Training and Development: We offer a variety of training programs designed to enhance the skills and knowledge of your team. Our workshops and seminars cover a wide range of topics, from leadership development to technical skills training.
+      
+      5. Marketing and Branding: Our marketing and branding services are designed to help you build a strong and recognizable brand. From digital marketing strategies to creative design, we provide the tools you need to reach your target audience and achieve your marketing objectives.
+      
+      At Geeed, we are dedicated to providing services that not only meet but exceed your expectations. Contact us today to learn more about how we can support your business and help you achieve your goals.
+      </details></p>
+      <div class="service-logo">
+        <img class="imges" src="support.png" ></img>
+      </div>
+</section>
+
+<section class="contact" id="contact" style="font-family: Arial, sans-serif; 
+font-size: 16px;
+color: #dadadaae; 
+
+text-align: center;
+
+background-color: #f0f0f03e; 
+padding: 20px;
+border: 1px solid #7877776b;
+border-radius: 5px; 
+
+">
+    <h2 style="margin-bottom: 0.6em;padding:0;color:#ffffff;">Contact Us</h2>
+
+    <p style="text-align: justify;">We'd love to hear from you! Whether you have a question about our services, need assistance, or just want to talk, we're here to help. Reach out to us through any of the following ways:</p>
+    <ul style="text-align: justify; list-style-type: none;" style="list-style-type: none;">
+        <li><strong><u>Email</u></strong>: <a href="mailto:aminenb061@gmail.com" style="text-decoration: none ;color: rgb(255, 255, 255);">aminenb061@.com</a></li>
+        <li><strong><u>Phone</u></strong>: <a href="tel:+212 632-460828" style="text-decoration: none ;color: rgb(255, 255, 255);">+212 632-460828</a></li>
+        <li><strong><u>Address</u></strong>:<address> Aoulad Bousalleh, Ain Chkaf, Fes, Morocco</address> </li>
+    </ul>
+    <p style="text-align: justify;">Our team is available Monday through Friday, from 9 AM to 5 PM. We strive to respond to all inquiries within 24 hours.</p>
+
+    <div class="info-logo">
+      <img class="imges" src="contact.png" ></img>
+    </div>
+
+
+
+</section>
+  <div class="container-register">
+    <form action="process_login.php" id="passwordForm" class="form" method="POST">
+        <h2>Create Accont</h2>
+        <div class="form-group">
+            <label for="new_user">Email</label>
+            <input type="email" id="new_user" name="new_user"required placeholder="example123@gmail.com"pattern="[ A-Z{1,} 0-9{1,} a-z{8,}]{10,}@(gmail|yahoo|outlouk).(com|ma|org) ">
+        </div>
+        <div class="form-group">
+            <label for="new_pass">Password</label>
+            <input type="password" id="new_pass" name="new_pass"required  placeholder="xxxxxxxxxxxxxxx">
+        </div>
+        <div class="form-group">
+            <label for="confirm_pass">Confirm Password</label>
+            <input type="password" id="confirm_pass" name="confirm_pass"required placeholder="Confirm Password">
+
+
+        </div>
+        <button class="submit"  type="submit" onclick="validatePassword()">Create Now</button>
+        <p class="p">you have accont? <a href="login.html">Login</a></p>
+    </form>
+</div>
+<script src="scripting.js"></script>
+</body>
+<style>
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-image: url(abstract-dark-background-with-flowing-colouful-waves.jpg) ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+
+
+
+
+/*   
+  background-color: F0F0F0;
+  background-color: #ffffff40; */
+
+  
+}
+
+.navbar {
+  display: flex;
+  top: 0;
+  width: 100%;
+  height:60px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff1a;
+  padding: 20px 20px;
+  color: white;
+  position:  fixed;
+  transition: top 0.4s;
+  z-index: 1000;
+  backdrop-filter: blur(16px) saturate(120em);
+  transition:all 0.3s ease-in-out;
+  
+}
+.navbar:hover{
+  background-color: #333;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: aliceblue;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+  transition: all 0.4s ease-in-out;
+}
+.nav-links li:hover{
+  transform:scale(1.1);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+  padding:  3px 5px 3px 5px;
+  transition: all 0.4s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+  text-decoration: overline;
+}
+
+.auth-buttons .btn-login,
+.auth-buttons .btn-signup {
+  text-decoration: none;
+  color: white;
+  margin-left: 15px;
+  padding: 5px 15px;
+  border: 1px solid white;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.auth-buttons .btn-login:hover {
+  background-color: #555;
+}
+
+.auth-buttons .btn-signup {
+  background-color: #00bcd4;
+  border: none;
+}
+
+.auth-buttons .btn-signup:hover {
+  background-color: #008c9e;
+}
+
+/* Burger Menu for Small Screens */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger-menu span {
+  background-color: white;
+  height: 3px;
+  width: 25px;
+  margin: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* .nav-links, */
+  .auth-buttons {
+    display: none;
+    flex-direction: row-reverse;
+    align-items:center;
+    background-color: #313131ce;
+    position:absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .nav-links.active,
+  .auth-buttons.active {
+    display: flex;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+}
+</style>
+<script>
+const burgerMenu = document.querySelector('.burger-menu');
+const navLinks = document.querySelector('.nav-links');
+const authButtons = document.querySelector('.auth-buttons');
+
+burgerMenu.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  authButtons.classList.toggle('active');
+  
+});
+</script>
+<footer class="site-footer">
+  <div class="footer-content">
+      <div class="footer-section about" style="text-align:justify;">
+          <h2>About Us</h2>
+          <p>We are a company dedicated to providing the best services to our customers. Our mission is to deliver quality and excellence in everything we do.</p>
+      </div>
+      <div class="footer-section links" style="text-align:justify;">
+          <h2>Quick Links</h2>
+          <ul style="list-style-type: none;">
+              <li><a href="#home"><u>Home</u></a></li>
+              <li><a href="#service"><u>Services</u></a></li>
+              <li><a href="#about"><u>About</u></a></li>
+              <li><a href="#contact"><u>Contact</u></a></li>
+          </ul>
+      </div>
+      <div class="footer-section contact" style="text-align:justify;">
+          <h2>Contact Us</h2>
+          <p><u>Email</u>: <a href="mailto:aminenb061@gmail.com">aminenb061@gmail.com</a></p>
+          <p><u>Phone</u>: <a href="tel:+212 632460828">+212 632460828</a></p>
+          <p><u>Address</u>: Aoulad Bousalleh, Ain Chkaf, Fes, Morocco</p>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2024 Geeed. All rights reserved. Dev By Amine Nabou.</p>
+  </div>
+</footer>
+<script>
+  AOS.init();
+</script>
+
+</html>

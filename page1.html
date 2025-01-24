@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم المتقدمة</title>
+    <link rel="stylesheet" href="styling.css">
+
+    <style>
+   
+        section {
+            padding: 60px 20px;
+            margin-top: 50px;
+            color: #ffffff80;
+            position: relative;
+            z-index: 1;
+            justify-content: center;
+        }
+        
+        section h2 {
+            margin-top: 0;
+        };
+        
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start; 
+            padding: 20px;
+        }
+        
+        .container div {
+            background-color: rgba(255, 255, 255, 0.8); 
+            border-radius: 10px; 
+            padding: 20px;
+            margin: 10px;
+            flex: 1; 
+            max-width: 300px; 
+        }
+        
+        .container h2 {
+            margin-top: 0;
+        }
+        
+           
+          </style>
+          <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+          </script>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="logo">Geeed</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about"></a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="burger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+    <div class="sidebar" id="sidebar">
+        <h2>لوحة التحكم</h2>
+        <ul>
+            <li><a href="#dashboard">الرئيسية</a></li>
+            <li><a href="#profile">الملف الشخصي</a></li>
+            <li><a href="#settings">الإعدادات</a></li>
+            <li><a href="#logout">تسجيل الخروج</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div id="dashboard">
+            <h1>الرئيسية</h1>
+            <p>مرحباً بك في لوحة التحكم الخاصة بك.</p>
+        </div>
+        <div id="profile">
+            <h1>الملف الشخصي</h1>
+            <p>هنا يمكنك تحديث معلوماتك الشخصية.</p>
+        </div>  
+        <div id="settings">
+            <h1>الإعدادات</h1>
+            <p>قم بتعديل إعدادات حسابك هنا.</p>
+        </div>
+    </div>
+    <script src="scripting.js"></script>
+</body>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-image: url(abstract-dark-background-with-flowing-colouful-waves.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;background-color: F0F0F0;
+  background-color: #ffffff40;
+
+  
+}
+
+.navbar {
+  display: flex;
+  top: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 20px 20px;
+  color: white;
+  position:  fixed;
+  transition: top 0.4s;
+  z-index: 1000;
+  
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: aliceblue;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 35px;
+  
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+.auth-buttons .btn-login,
+.auth-buttons .btn-signup {
+  text-decoration: none;
+  color: white;
+  margin-left: 15px;
+  padding: 5px 15px;
+  border: 1px solid white;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.auth-buttons .btn-login:hover {
+  background-color: #555;
+}
+
+.auth-buttons .btn-signup {
+  background-color: #00bcd4;
+  border: none;
+}
+
+.auth-buttons .btn-signup:hover {
+  background-color: #008c9e;
+}
+
+/* Burger Menu for Small Screens */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger-menu span {
+  background-color: white;
+  height: 3px;
+  width: 25px;
+  margin: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* .nav-links, */
+  .auth-buttons {
+    display: none;
+    flex-direction: row-reverse;
+    align-items:center;
+    background-color: #313131ce;
+    position:absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .nav-links.active,
+  .auth-buttons.active {
+    display: flex;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+}
+</style>
+<script>
+const burgerMenu = document.querySelector('.burger-menu');
+// const navLinks = document.querySelector('.nav-links');
+const authButtons = document.querySelector('.auth-buttons');
+
+burgerMenu.addEventListener('click', () => {
+  // navLinks.classList.toggle('active');
+  authButtons.classList.toggle('active');
+});
+</script>
+</html>
